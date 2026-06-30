@@ -74,13 +74,14 @@ Add this in your module's build.gradle
 	}
 
 # Features
-- Supports Paste via clipboard flawlessly.
-- Password toggle to hide/show text on the go.
-- Easy getText() and setText() methods like a regular EditText.
-- Listener to detect when the pin is completely entered.
-- Customizable pin background, textsize and pinsize.
-- Customizable toggle tint/color and size.
-- Flag to set password input type.
+- Smart Clipboard Paste: Automatically distributes copied PINs across all inputs seamlessly.
+- Comprehensive UI Customization: Complete control over pin dimensions, text sizing, text color, and individual cell backgrounds using Drawables.
+- Password Masking: Built-in option to obscure input text into a secure dotted format.
+- Flexible Input Types: Supports multiple input variations, such as numeric or alphanumeric text.
+- Dual Event Listeners: Real-time tracking for every character change, plus a dedicated completion listener triggered automatically when the entire pin is filled.
+- Interactive Password Toggle: Show or hide input on the fly with customizable toggle visibility.
+- Customizable Toggle Aesthetics: Adjustable sizing and color tinting specifically for the password toggle icon.
+
 
 # Usage
 
@@ -97,7 +98,7 @@ Jetpack Compose:
             Log.d("asdf", "pin value: $it")
         },
         pinSize = 40.dp,                                                                  //set size of pin
-        inputType = InputType.NUMBER,                                                     //or InputType.NUMBER
+        inputType = InputType.TEXT,                                                       //or InputType.NUMBER
         showPasswordToggle = true,                                                        //make the password toggle visible
         passwordToggleColor = Color.Blue,                                                 //set toggle drawable tint/color
         pinTextSize = 20.sp,                                                              //set pin text size
